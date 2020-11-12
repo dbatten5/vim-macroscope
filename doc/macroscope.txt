@@ -1,0 +1,32 @@
+*macroscope.txt* Quick macro editing                                       v1.0
+*Macroscope*
+
+==============================================================================
+CONTENTS                                                   *MacroscopeContents*
+
+    1. Intro .............................. |MacroscopeIntro|
+    2. Commands ........................ |MacroscopeCommands|
+      2.1 |:Macroscope|
+    3. Mappings ........................ |MacroscopeMappings|
+
+==============================================================================
+OVERVIEW                                                      *MacroscopeIntro*
+
+For whenever you have a macro that needs editing but is too precious to throw
+away and start again.
+
+==============================================================================
+COMMANDS                                                   *MacroscopeCommands*
+
+------------------------------------------------------------------------------
+2.1 :Macroscope {register}                                        *:Macroscope*
+
+Open a scratch window with the macro associated with {register} pasted. If
+no register is provided, q will be used. Leave the window to update the
+macro.
+
+==============================================================================
+MAPPINGS                                                   *MacroscopeMappings*
+
+Buffer-local
+    s       Update the macro with the contents of the window
