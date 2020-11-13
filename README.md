@@ -23,8 +23,8 @@ See the docs for configuration options.
 
 ## Installation
 
-Use your favourite plugin manager to install this package. I like `vim-plug`.
+Use your favourite plugin manager to install this plugin. I like `vim-plug`.
 
 ```
 Plug 'dbatten5/vim-macroscope'
-``
+```
