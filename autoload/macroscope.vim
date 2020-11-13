@@ -1,24 +1,48 @@
+" config
+
+let g:macroscope_default_register = get(g:, 'macroscope_default_register', 'q')
+let g:macroscope_window_position  = get(g:, 'macroscope_window_position', 'bottom')
+let g:macroscope_window_height    = get(g:, 'macroscope_window_height', '1')
+
+" public functions
+
 function! macroscope#open(...)
+  execute s:window_position_check()
   if a:0 == 0
-    let register = 'q'
+    let register = g:macroscope_default_register
   else
     let register = a:1
   endif
-  let reg_content = getreg(register)
-  if empty(reg_content)
+  if empty(getreg(register))
     echo 'macroscope: no register associated with ' . register . '!'
     return 0
   endif
   call s:open_window()
-  execute 'normal! "' . register . 'p'
+  execute 'normal! "' . register . 'pkdd'
   call s:activate_autocmds(bufnr('%'), register)
 endfunction
 
 " utility
 
+function! s:window_position_check()
+  let position = g:macroscope_window_position
+  if position != 'bottom' && position != 'top'
+    echo 'macroscope: invalid position! please choose top or bottom, you chose ' . position
+    return 'return 0'
+  endif
+  return ''
+endfunction
+
 function! s:open_window()
-  execute 'botright 1 new __macroscope__'
+  execute s:get_position() . ' ' . g:macroscope_window_height . ' new __macroscope__'
   setlocal bt=nofile bh=wipe nobl noswapfile nu
+endfunction
+
+function! s:get_position()
+  if g:macroscope_window_position == 'top'
+    return 'topleft'
+  endif
+  return 'botright'
 endfunction
 
 function! s:close_window(reg)

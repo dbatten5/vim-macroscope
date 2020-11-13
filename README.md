@@ -19,10 +19,12 @@ it.
 - Alternatively, `s` in normal mode in the `macroscope` window to update the
   macro.
 
+See the docs for configuration options.
+
 ## Installation
 
 Use your favourite plugin manager to install this package. I like `vim-plug`.
 
 ```
 Plug 'dbatten5/vim-macroscope'
-```
+``
