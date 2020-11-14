@@ -33,32 +33,34 @@ macro.
 CONFIGURATION                                         *MacroscopeConfiguration*
 
 ------------------------------------------------------------------------------
-3.1 g:macroscope_default_register = 'q'         *g:macroscope_default_register*
+3.1 g:macroscope_default_register = `'q'`         *g:macroscope_default_register*
 
-Set the register macroscope defaults to when no argument is supplied to 
-|:Macroscope|
-
-------------------------------------------------------------------------------
-3.2 g:macroscope_window_position = 'bottom'      *g:macroscope_window_position*
-
-Set the position of the macroscope editing window. Options are 'bottom' and
-'top'
+Set the register macroscope defaults to when no argument is supplied to
+|:Macroscope|.
 
 ------------------------------------------------------------------------------
-3.3 g:macroscope_window_size = '1'                   *g:macroscope_window_size*
+3.2 g:macroscope_window_position = `'bottom'`      *g:macroscope_window_position*
 
-Set the size of the macroscope editing window in rows. 
+Set the position of the macroscope editing window. Options are `'bottom'` and
+`'top'`.
+
+------------------------------------------------------------------------------
+3.3 g:macroscope_window_size = `'1'`                   *g:macroscope_window_size*
+
+Set the size of the macroscope editing window in rows.
 
 ==============================================================================
 MAPPINGS                                                   *MacroscopeMappings*
 
-Global
-    This comes with no mappings out of the box, but feel free to add one like
-    so:
-        `nnoremap <leader>ms :Macroscope`
+Global ~
 
-Buffer-local
-    s       Update the macro with the contents of the window
+This comes with no mappings out of the box, but feel free to add one like
+so: >
+
+    nnoremap <leader>ms :Macroscope<cr>
+
+Buffer-local ~
+    s       Update the macro with the contents of the window.
 
 ==============================================================================
 vim:tw=78:ts=8:ft=help:norl:
