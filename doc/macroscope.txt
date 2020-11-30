@@ -1,4 +1,4 @@
-*macroscope.txt* Quick macro editing                                       v1.0
+*macroscope.txt* Quick macro editing                                     v1.1.1
 *Macroscope*
 
 ==============================================================================
@@ -57,7 +57,7 @@ Global ~
 This comes with no mappings out of the box, but feel free to add one like
 so: >
 
-    nnoremap <leader>ms :Macroscope<cr>
+    nnoremap <leader>ms :Macroscope
 
 Buffer-local ~
     s       Update the macro with the contents of the window.

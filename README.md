@@ -6,8 +6,7 @@ Quick macro editing in vim.
 
 To save myself looking at [this
 article](https://thoughtbot.com/blog/how-to-edit-an-existing-vim-macro) for the
-100th time when I want to edit a macro, I thought I'd write a quick plugin for
-it.
+100th time when I want to edit a macro, I thought I'd write a plugin for it.
 
 ## Features
 

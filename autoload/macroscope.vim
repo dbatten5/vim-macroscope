@@ -8,7 +8,7 @@ let g:macroscope_window_height    = get(g:, 'macroscope_window_height', '1')
 
 function! macroscope#open(...)
   execute s:window_position_check()
-  if a:0 == 0
+  if empty(a:1)
     let register = g:macroscope_default_register
   else
     let register = a:1
@@ -35,7 +35,7 @@ endfunction
 
 function! s:open_window()
   execute s:get_position() . ' ' . g:macroscope_window_height . ' new __macroscope__'
-  setlocal bt=nofile bh=wipe nobl noswapfile nu
+  setlocal buftype=nofile bh=wipe nobl noswapfile nonu norelativenumber
 endfunction
 
 function! s:get_position()
