@@ -51,6 +51,7 @@ function! s:close_window(reg)
 endfunction
 
 function! s:update_macro(reg)
+  echo 'macroscope: macro in register ' . a:reg . ' updated!'
   execute 'normal! "' . a:reg . 'yy'
 endfunction
 
@@ -58,6 +59,5 @@ function! s:activate_autocmds(bufnr, reg)
   augroup macroscope_autohide
     autocmd!
     execute 'autocmd Winleave <buffer=' . a:bufnr . '> nested call <SID>close_window("'. a:reg . '")'
-    execute 'autocmd * <buffer=' . a:bufnr . '> nnoremap <buffer> s <SID>update_macro("' . a:reg . '")'
   augroup END
 endfunction
