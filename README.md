@@ -15,8 +15,6 @@ article](https://thoughtbot.com/blog/how-to-edit-an-existing-vim-macro) for the
   no register supplied).
 - Leaving the window will automatically update the macro with whatever was
   inside the `macroscope` window.
-- Alternatively, `s` in normal mode in the `macroscope` window to update the
-  macro.
 
 See the docs for configuration options.
 

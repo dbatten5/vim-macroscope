@@ -1,4 +1,4 @@
-*macroscope.txt* Quick macro editing                                     v1.1.1
+*macroscope.txt* Quick macro editing                                     v2.0.0
 *Macroscope*
 
 ==============================================================================
@@ -58,9 +58,6 @@ This comes with no mappings out of the box, but feel free to add one like
 so: >
 
     nnoremap <leader>ms :Macroscope
-
-Buffer-local ~
-    s       Update the macro with the contents of the window.
 
 ==============================================================================
 vim:tw=78:ts=8:ft=help:norl:
